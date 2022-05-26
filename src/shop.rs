@@ -42,8 +42,7 @@ impl Shop {
             (true, false) => FightResult::Win,
             (false, false) => FightResult::Tie,
             (false, true) => FightResult::Loss,
-            //impossible but mandatory
-            (true, true) => FightResult::Draw,
+            _ => unreachable!(),
         }
     }
 }
